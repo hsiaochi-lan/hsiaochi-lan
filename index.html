@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8" />
-  <title>我的第一個 GitHub Pages 網站</title>
-</head>
-<body>
-  <h1>Hello GitHub Pages</h1>
-  <p>這是我在 GitHub 上的第一個靜態網頁！</p>
-</body>
-</html>
+<h1>BNPL 問卷調查</h1>
+<p>請問您是否曾「聽過並實際使用過」先買後付（BNPL）服務？</p>
+<button onclick="goToUsed()">我有使用過</button>
+<button onclick="goToExperiment()">我沒聽過也沒使用過</button>
+
+<script>
+function goToUsed() {
+  window.location.href = "https://www.surveycake.com/s/gAVBL";
+}
+
+function goToExperiment() {
+  const experimentLinks = [
+    "https://www.surveycake.com/s/Ln72K",
+    "https://www.surveycake.com/s/k2rp3",
+    "https://www.surveycake.com/s/qlorw",
+    "https://www.surveycake.com/s/eyBGB",
+    "https://www.surveycake.com/s/M6YoR"
+  ];
+  const randomIndex = Math.floor(Math.random() * experimentLinks.length);
+  window.location.href = experimentLinks[randomIndex];
+}
+</script>
