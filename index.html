@@ -1,22 +1,111 @@
-<h1>BNPL 問卷調查</h1>
-<p>請問您是否曾「聽過並實際使用過」先買後付（BNPL）服務？</p>
-<button onclick="goToUsed()">我有使用過</button>
-<button onclick="goToExperiment()">我沒聽過也沒使用過</button>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BNPL 問卷調查</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Serif TC', serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 3rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
 
-<script>
-function goToUsed() {
-  window.location.href = "https://www.surveycake.com/s/gAVBL";
-}
+    h1 {
+      font-size: 2rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
 
-function goToExperiment() {
-  const experimentLinks = [
-    "https://www.surveycake.com/s/Ln72K",
-    "https://www.surveycake.com/s/k2rp3",
-    "https://www.surveycake.com/s/qlorw",
-    "https://www.surveycake.com/s/eyBGB",
-    "https://www.surveycake.com/s/M6YoR"
-  ];
-  const randomIndex = Math.floor(Math.random() * experimentLinks.length);
-  window.location.href = experimentLinks[randomIndex];
-}
-</script>
+    p {
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .btn-group {
+      margin-top: 2rem;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      margin-right: 1rem;
+      border: 1px solid #666;
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    button:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+    }
+
+    .intro {
+      margin-top: 2rem;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .logo {
+      width: 280px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="/mnt/data/image.png" alt="中山資管系 logo">
+
+  <div class="intro">
+    <h1>BNPL 問卷調查</h1>
+    <p>親愛的先生／小姐 您好：</p>
+    <p>感謝您撥冗參與本研究。本問卷旨在探討「先買後付（Buy Now, Pay Later, BNPL）」支付模式對消費者使用意願的影響，並聚焦於創新抵制的相關因素。</p>
+    <p>隨著 BNPL 服務在全球迅速擴展，了解消費者對此新興支付方式的態度與行為，不僅有助於提升用戶體驗，也對未來金融科技創新與政策制定具有重要參考價值。</p>
+    <p>本問卷內容包含您對 BNPL 服務的認知、使用經驗與相關看法，目的是深入瞭解消費者在面對新技術與付款方式時的心理反應與行為選擇，並為未來設計更貼近使用者需求的創新服務提供依據。</p>
+    <p><strong>本問卷採匿名方式填寫，所有資料僅供學術研究使用，將嚴格保密，請您安心填答。</strong><br>整體填寫時間約為 5～8 分鐘，您的意見對我們極具參考價值，敬請撥冗協助填寫。</p>
+    <p>再次感謝您的參與與支持，敬祝<br>事事順心、平安健康</p>
+    <p>國立中山大學 資訊管理研究所<br>指導教授：徐士傑 博士<br>研究生：藍筱琦<br>聯絡信箱：n124320007@gmail.com</p>
+  </div>
+
+  <p>請問您是否曾「<strong>聽過並實際使用過</strong>」先買後付（BNPL）服務？</p>
+
+  <div class="btn-group">
+    <button onclick="goToUsed()">我有使用過</button>
+    <button onclick="goToExperiment()">我沒聽過也沒使用過</button>
+  </div>
+
+  <script>
+    function goToUsed() {
+      window.location.href = "https://www.surveycake.com/s/gAVBL";
+    }
+
+    function goToExperiment() {
+      const experimentLinks = [
+        "https://www.surveycake.com/s/Ln72K",
+        "https://www.surveycake.com/s/k2rp3",
+        "https://www.surveycake.com/s/qlorw",
+        "https://www.surveycake.com/s/eyBGB",
+        "https://www.surveycake.com/s/M6YoR"
+      ];
+      const randomIndex = Math.floor(Math.random() * experimentLinks.length);
+      window.location.href = experimentLinks[randomIndex];
+    }
+  </script>
+</body>
+</html>
